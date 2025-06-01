@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { User } from './user.entity';
 import { create } from 'axios';
-
+ 
 @Entity({ name: 'category' })
 export class Category {
   @PrimaryGeneratedColumn()
