@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 import { UsersModule } from './modules/users/users.module';
 import { CategoriesModule } from './modules/categories/categories.module';
+import { TransactionsModule } from './modules/transactions/transactions.module';
+import { GoalsModule } from './modules/goals/goals.module';
 
 @Module({
   imports: [
@@ -20,7 +22,9 @@ import { CategoriesModule } from './modules/categories/categories.module';
       inject: [ConfigService],
     }),
     UsersModule,
+    TransactionsModule,
     CategoriesModule,
+    GoalsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
